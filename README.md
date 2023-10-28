@@ -1,6 +1,6 @@
 # Deployment notes for CloudXray Kubernetes agent
 
-This software component (agent) is a part of CloudXray Engineering Knowledge Generation Platform.
+This software component (agent) is a part of the CloudXray Engineering Platform.
 
 Prerequisites:
 1. Tools: git, kubectl, helm
