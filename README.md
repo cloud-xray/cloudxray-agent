@@ -8,8 +8,8 @@ Prerequisites:
 3. A logical name (like "eks-prod1") assigned to the target K8s cluster. While K8s does not have the concept of a cluster name, we use this name to identify the cluster in the CloudXray console UI.
 
 Please use the following procedure to deploy the agent in your Kubernetes cluster:
-1. Head to CloudXray console UI https://app.cloudxray.co/ to sign up for the service and create a new customer account
-2. Inside your CloudXray user account, create a new K8s token by heading to "Admin -> Integrations -> K8s Integration" menu and clicking "Add New K8s Account Configuration" button. Specify a meaningful token name and click "Create" button. Please create new K8s token for each K8s cluster that you want to connect to CloudXray.
+1. If you don't already have a CloudXray customer account then go to CloudXray console UI https://app.cloudxray.co/ to sign up for the service
+2. In your CloudXray user account, create a new K8s token by heading to "Admin -> Integrations -> K8s Integration" menu and clicking "Add New K8s Account Configuration" button. Specify a meaningful token name and click "Create" button. Please create new K8s token for each K8s cluster that you want to connect to CloudXray.
 3. Save the generated unique token in a secure place
 4. Create a local clone of the repository and change directory to it
 
