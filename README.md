@@ -21,7 +21,7 @@ cd cloudxray-agent
 
 5. Deploy the CloudXray K8s agent using the following command (replace <AGENT_TOKEN> with the token created in the CloudXray console UI, <CLUSTER_NAME> with the unique logical name to be associated with configuration data collected from the K8s cluster):
 ```
-helm install k8s-agent helm/k8s-agent --set general.agentToken="<AGENT_TOKEB>" \
+helm install k8s-agent helm/k8s-agent --set general.agentToken="<AGENT_TOKEN>" \
  --set general.clusterName=<CLUSTER_NAME> --create-namespace -n cloudxray
 ```
 
