@@ -3,14 +3,14 @@
 # Declare variables to be passed into your templates.
 
 general:
-  backendAPIURL: "https://app.cloudxray.co/validate_k8s_token"
+  backendAPIURL: "https://app.cloudxray.co/k8s_resource_data_upload"
 
 replicaCount: 1
 
 image:
   repository: vgartvichcxr/k8s-agent
   pullPolicy: IfNotPresent
-  tag: "2023-10-28_main_77dce7c6"
+  tag: "2023-11-21_main_fbfe38df"
 
 nameOverride: ""
 fullnameOverride: ""
