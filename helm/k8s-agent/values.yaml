@@ -10,7 +10,7 @@ replicaCount: 1
 image:
   repository: vgartvichcxr/k8s-agent
   pullPolicy: IfNotPresent
-  tag: "2023-11-21_main_fbfe38df"
+  tag: "2023-12-13_main_6ec7cc84"
 
 nameOverride: ""
 fullnameOverride: ""
