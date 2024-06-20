@@ -51,6 +51,8 @@ $
 ability to troubleshoot issues with the cluster) please add Helm command 
 option "--set general.enableRemoteDataCollection=True"; for example:
 
+```
 helm install k8s-agent helm/k8s-agent --set \
 general.agentToken="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9eyJlbWFpbCI6InNodWJtZSI6Ik5ld0VLUyJ9Fa8uiafE" \
  --set general.clusterName=cxr-eks --set general.enableRemoteDataCollection=True --create-namespace -n cloudxray
+ ```
