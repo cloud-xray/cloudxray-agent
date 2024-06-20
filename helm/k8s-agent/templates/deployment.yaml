@@ -42,6 +42,10 @@ spec:
             value: {{ required "K8s cluster name is required" .Values.general.clusterName }}
           - name: BACKEND_API_URL
             value: {{ .Values.general.backendAPIURL }}
+          - name: BACKEND_WS_URL
+            value: {{ .Values.general.backendWSURL }}
+          - name: ENABLE_REMOTE_DATA_COLLECTION
+            value: "{{ .Values.general.enableRemoteDataCollection }}"
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}

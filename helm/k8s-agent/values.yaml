@@ -4,13 +4,15 @@
 
 general:
   backendAPIURL: "https://app.cloudxray.co/k8s_resource_data_upload"
+  backendWSURL: "wss://app.cloudxray.co/v1/agent_connection"
+  enableRemoteDataCollection: "False"
 
 replicaCount: 1
 
 image:
   repository: vgartvichcxr/k8s-agent
   pullPolicy: IfNotPresent
-  tag: "2023-12-22_main_a238ee49"
+  tag: "2024-06-20_main_b89d8414"
 
 nameOverride: ""
 fullnameOverride: ""

@@ -9,12 +9,12 @@ Prerequisites:
 
 Please use the following procedure to deploy the agent in your Kubernetes cluster:
 1. If you don't already have a CloudXray customer account then go to CloudXray console UI https://app.cloudxray.co/ to sign up for the service
-2. In your CloudXray user account, create a new K8s token by heading to "Admin -> Integrations -> K8s Integration" menu and clicking "Add New K8s Account Configuration" button. Specify a meaningful token name and click "Create" button. Please create new K8s token for each K8s cluster that you want to connect to CloudXray.
+2. In your CloudXray user account, create a new K8s token by heading to "Integrations -> Kubernetes" menu and clicking "Add New Integration" button. Specify a meaningful token name and click "Add" button. Please create new K8s token for each K8s cluster that you want to connect to CloudXray.
 3. Save the generated unique token in a secure place
 4. Create a local clone of the repository and change directory to it
 
 ```
-git clone https://github.com/we-will-rename-it-soon/cloudxray-agent.git
+git clone https://github.com/cloud-xray/cloudxray-agent.git
 
 cd cloudxray-agent
 ```
@@ -47,3 +47,10 @@ $
 # Notes
 - The agent does not collect K8s "secret" resources
 - K8s data is collected on agent startup and after that every one hour
+- If you would like to enable remote data collection from the connected K8s cluster (this will improve CloudXray's
+ability to troubleshoot issues with the cluster) please add Helm command 
+option "--set general.enableRemoteDataCollection=True"; for example:
+
+helm install k8s-agent helm/k8s-agent --set \
+general.agentToken="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9eyJlbWFpbCI6InNodWJtZSI6Ik5ld0VLUyJ9Fa8uiafE" \
+ --set general.clusterName=cxr-eks --set general.enableRemoteDataCollection=True --create-namespace -n cloudxray
