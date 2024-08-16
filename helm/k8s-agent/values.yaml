@@ -23,6 +23,13 @@ podLabels: {}
 podSecurityContext: {}
   # fsGroup: 2000
 
+secret:
+  # -- Whether helm chart creates controller secret
+  create: true
+
+  # -- Override to use your own secret
+  name: "k8s-agent-token-secret"
+
 securityContext: {}
   # capabilities:
   #   drop:
